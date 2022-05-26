@@ -1,0 +1,9 @@
+.popular-products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    /* position: relative; */
+}
+.popular-product-heading{
+    color: #eb4118;
+}
