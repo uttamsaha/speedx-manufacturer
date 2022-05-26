@@ -3,6 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
+import logo from '../../../Images/logo.png';
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -12,27 +13,27 @@ const Navbar = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className="text-white">Home</Link>
       </li>
       <li>
-        <Link to="/appointment">Appointment</Link>
+        <Link to="/appointment" className="text-white">Appointment</Link>
       </li>
       <li>
-        <Link to="/review">Review</Link>
+        <Link to="/review" className="text-white">Review</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact" className="text-white">Contact</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about" className="text-white">About</Link>
       </li>
       <li>
-        {user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <Link to="/login">Login</Link>}
+        {user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <Link to="/login" className="text-white text">Login</Link>}
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-[#1D293A]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -60,7 +61,10 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">SpeedX Manufacturer</Link>
+       <div className="flex items-center">
+         <img className="w-14" src={logo} alt="" />
+          <Link to="/" className="btn btn-ghost normal-case text-xl text-white">SpeedX Manufacturer</Link>
+       </div>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
