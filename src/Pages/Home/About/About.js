@@ -4,7 +4,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <div class="hero min-h-screen bg-base-100 mt-[-290px]">
+    <div class="hero min-h-screen bg-base-100 lg:mt-[-290px]">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <img src={img} className=" lg:max-w-xl sm:max-w-sm-sm xs:max-w-xs rounded-lg shadow-2xl lg:h-80" alt=''/>
     <div>
