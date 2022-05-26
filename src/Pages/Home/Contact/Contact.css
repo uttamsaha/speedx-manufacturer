@@ -1,0 +1,150 @@
+
+.hr {
+  width: 125px;
+  height: 4px;
+  background-color: black;
+  /* border-radius: 20px; */
+}
+
+.contact-container {
+  display: flex;
+  margin-top: 120px;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-area {
+  display: flex;
+  gap: 50px;
+  color: #3e3e3e;
+  font-size: 18px;
+}
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  /* width: 500px; */
+}
+.contact-subtitle{
+  font-weight: 500;
+}
+.contact-us-container {
+  display: flex;
+  gap: 30px;
+}
+.contact-info {
+  width: 400px;
+}
+.contact-info .name,
+.email,
+.msg {
+  width: 350px;
+  border: none;
+  border-bottom: 2px solid gray;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+.name,
+.email {
+  height: 50px;
+}
+.contact-info .name:focus {
+  /* border: none; */
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.contact-info .email:focus {
+  /* border: none; */
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.contact-info .msg:focus {
+  /* border: none; */
+  outline: none;
+  border-bottom: 2px solid black;
+}
+::placeholder {
+  color: #1c1c1c;
+  font-size: 16px;
+}
+input:focus ::placeholder {
+  display: none;
+}
+.contact-image img {
+  width: 460px;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+.contact-info button{
+    background-color: #e41c23;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact-info button:hover{
+  background-color: red;
+}
+
+.contact-info p{
+    font-size: 18px;
+    color:#3e3e3e;
+}
+
+.icons{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #e41c23;
+}
+.contact-container h5,h1{
+    margin-bottom: 30px;
+}
+.contact-container h5{
+    color: #3e3e3e;
+}
+
+@media (max-width:688px) {
+  .contact-area{
+    flex-direction: column;
+  }
+  .map iframe{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+  }
+  .contact-us-container{
+    flex-direction: column;
+  }
+  .contact-image img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .contact-info{
+    width: 80%;
+    padding-left: 20px;
+  }
+  .contact-title,
+  .contact-subtitle{
+    padding-left: 30px;
+    /* font-weight: 900; */
+  }
+  .hr{
+    margin-left: 30px;
+  }
+  .contact-us{
+    margin-top: 50px;
+  }
+}

@@ -36,7 +36,7 @@ const PopularProducts = () => {
     ]
   return (
     <div className="mb-20">
-      <h2 className="text-2xl text-center mt-20 popular-product-heading">Popular Products</h2>
+      <h2 className="text-2xl text-center mt-20 text-primary popular-product-heading uppercase">Popular Products</h2>
       <h1 className="text-center text-3xl">We have the best quality Electronics products.</h1>
       <div className="popular-products">
           {
