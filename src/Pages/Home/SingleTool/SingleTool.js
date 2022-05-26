@@ -11,7 +11,7 @@ const SingleTool = ({tool}) => {
         <p className='mt-4'><span className='font-bold'>Price: </span><span className='font-bold text-primary'>{price}$</span>/<span className='text-sm font-bold text-red-500'>Unit</span></p>
         <p>{description.slice(0,150)}</p>
         <p className='mt-4'> <span className='font-bold text-sm'>Minimum Order Quantity:</span> <span className='font-bold text-primary'>{minOrderQuantity}</span></p>
-            <p className='font-bold'><span className='text-sm'>Available</span> <span className='text-primary'>{available}</span></p>
+            <p className='font-bold'><span className='text-sm'>Available:</span> <span className='text-primary'>{available}</span></p>
         <button className='btn btn-primary block mx-auto text-white'>buy now</button>
         </div>
     </div>

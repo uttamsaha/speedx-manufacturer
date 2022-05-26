@@ -1,5 +1,5 @@
 
-.hr {
+.divider {
   width: 125px;
   height: 4px;
   background-color: black;
@@ -141,7 +141,7 @@ textarea:focus:-moz-placeholder {
     padding-left: 30px;
     /* font-weight: 900; */
   }
-  .hr{
+  .divider{
     margin-left: 30px;
   }
   .contact-us{

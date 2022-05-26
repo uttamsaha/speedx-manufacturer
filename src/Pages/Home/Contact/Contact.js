@@ -12,7 +12,7 @@ const Contact = () => {
         <h5 className="contact-title font-bold">ANY QUESTIONS OR SUGGESTIONS?</h5>
         <h1 className="contact-subtitle text-primary uppercase">Write us</h1>
         <div className="contact-us-container">
-          <div className="hr"></div>
+          <div className="divider"></div>
           <div className="contact-info">
               <p>If you have any question you can send us your message by fill up the forms.  We will be very happy to hear from you.</p>
 

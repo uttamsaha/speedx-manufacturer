@@ -1,0 +1,12 @@
+.popular-reviews{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    /* position: relative; */
+}
+
+@media (max-width:688px) {
+    .popular-reviews{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

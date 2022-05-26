@@ -1,0 +1,45 @@
+.star{
+    display: flex;
+    color: orange;
+}
+.popular-product{
+    margin-top: 200px;
+    width: 350px;
+    padding: 0px 30px 30px 30px;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-sizing: border-box;
+}
+.popular-name{
+    padding-top: 130px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.popular-image{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    /* background-color: red; */
+    overflow: hidden;
+    position:absolute;
+    top: -100px;
+    left: 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.hr{
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+}
+.iconx{
+    color: orange;
+}

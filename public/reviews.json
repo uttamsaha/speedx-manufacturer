@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jon Doe",
+    "img":"https://i.ibb.co/gVR0fSJ/5.png",
+    "description": "This is very very trusted manufacturer company I have ever seen. I'm regular customer.",
+    "ratings": 5
+  },
+  {
+    "name": "Alex Robato",
+    "img": "https://i.ibb.co/BqFjYFm/9.png",
+    "description": "Hey, Recently I bought 5000 pices of items. All of these are really good. Thank you.",
+    "ratings": 4
+  },
+  {
+    "name": "Nehal Roy",
+    "img": "https://i.ibb.co/WFLj4QK/10.png",
+    "description": "I am also regular customer of these manufacturer company. It's one fo the best producer.",
+    "ratings": 5
+  },
+  {
+    "name": "Trudo Texa",
+    "img": "https://i.ibb.co/h8LQ0r1/1.png",
+    "description": "I always keep wait for your offer. It provides lot of discount. Thank you.",
+    "ratings": 4
+  }
+]
