@@ -4,7 +4,7 @@ import SingleTool from "../SingleTool/SingleTool";
 const Tools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/tool')
         .then(res => res.json())
         .then(data => setTools(data.slice(0,6)));
     },[])
