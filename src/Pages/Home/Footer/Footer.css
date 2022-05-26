@@ -1,0 +1,107 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #292929;
+    color: white;
+    padding: 60px 0px;
+    margin-top: 100px;
+}
+.footer-items{
+    width: 245px;
+}
+.footer-items .links a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    margin-bottom: 9px;
+    font-size: 18px;
+
+}
+.links a:hover{
+    color: orange;
+}
+.recent-stored{
+    display: flex;
+    gap: 10px;
+}
+.recent-stored img{
+    width: 65px;
+    height: 65px;
+}
+.information h6{
+    margin: 5px 0px;
+    font-size: 17px;
+}
+.information p{
+    margin: 8px 0px;
+    font-size: 15px;
+}
+.price{
+    color: orange;
+}
+.recent-stored:hover h6{
+    color: orange;
+}
+.footer h5{
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.social-icons{
+    display: flex;
+}
+.social-icons .icon{
+    font-size: 22px;
+    margin-right: 16px;
+}
+.social-icons .icon:hover{
+    color: orange;
+}
+.social-icons .hr{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin: 10px 0px;
+
+}
+.footer-items p{
+    font-size: 17px;
+    font-weight: 500;
+}
+.footer-items button{
+    border: none;
+    padding: 10px 30px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer-items button:hover{
+    background-color: white;
+    color: black;
+}
+.footer .icn{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.inner-footer{
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+.inner-footer p{
+    margin: 0;
+}
+
+@media (max-width:688px) {
+    .footer{
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+    }
+}

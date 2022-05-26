@@ -13,6 +13,7 @@ const PopularProduct = ({product}) => {
         
         <div className='popular-name'>
         <h4 className=''>{name}</h4>
+        <hr className='hr' />
         </div>
         <div className='price-info'>
             <p className='font-bold'>${price}</p>
