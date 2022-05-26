@@ -36,8 +36,8 @@ const PopularProducts = () => {
     ]
   return (
     <div className="mb-20">
-      <h2 className="text-3xl text-center mt-20 text-primary popular-product-heading uppercase font-bold">Popular Products</h2>
-      <h1 className="text-center text-xl uppercase mt-3">We have the best quality Electronics products.</h1>
+      <h2 className="lg:text-3xl sm:text-2xl text-center mt-20 text-primary popular-product-heading uppercase font-bold">Popular Products</h2>
+      <h1 className="text-center xs:text-xs lg:text-xl uppercase mt-3">We have the best quality Electronics products.</h1>
       <div className="popular-products">
           {
               popularProducts.map(product => <PopularProduct key={product.id} product={product}></PopularProduct>)

@@ -41,3 +41,14 @@
     background-color: white;
     color: black;
 }
+
+@media (max-width:688px) {
+    .title-text1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .title-text2{
+        font-size: 55px;
+        text-align: center;
+    }
+}

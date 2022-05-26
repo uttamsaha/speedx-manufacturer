@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Drill Machine 1400W 13MM",
+    "img": "https://i.ibb.co/XbCZDXr/drill3.jpg",
+    "description": "Brand:Bosh, Size: 13mm, Input Power : 1400W, Voltage : 220V, No Load Speed: 0-2800r/min, HIGH QUALITY, LONG LIFE,PROFESSIONAL TOOLS HOUSE HOLD & INDUSTRIAL",
+    "minOrderQuantity": 50,
+    "available": 500,
+    "price": 35
+  },
+  {
+    "name": "Claw Hammer 450g Fiberglass Smooth ",
+    "img": "https://i.ibb.co/LRdrs2Q/hammer.jpg",
+    "description": "Model: 25030 Drop-forged carbon steel hammerhead Heat treatment, ground polished Li weight fiberglass handle Face Diameter: 29mm Head weight: 16oz or 450g",
+    "minOrderQuantity": 60,
+    "available": 800,
+    "price": 15
+  },
+  {
+    "name": "31 In 1 Screw Driver Set",
+    "img": "https://i.ibb.co/M2Qb6XG/driver.jpg",
+    "description": "100% Brand New and High Quality 31 Pc socket and bit set with flexible shaft driver magneti bits For electronic, cell phone, tablet repair and mod Suitable for most screw",
+    "minOrderQuantity": 100,
+    "available": 1000,
+    "price": 10
+  },
+  {
+    "name": "Electronic Diagonal Pliers Side",
+    "img": "https://i.ibb.co/J3ChFmV/xx.jpg",
+    "description": "Max Cut = 1mm Copper Wire Very Sharp Blades (Ideal for easy cutting) 5 inches total length Spring Action Lap Joint Rubber Comfort Grips for superior grip and precision.",
+    "minOrderQuantity": 30,
+    "available": 900,
+    "price": 12
+  },
+  {
+    "name": "Carbon Steel Small Gardening Shovel",
+    "img": "https://i.ibb.co/0fGL6Dr/shovel.jpg",
+    "description": "Max Cut = 1mm Copper Wire Very Sharp Blades (Ideal for easy cutting) 5 inches total length Spring Action Lap Joint Rubber Comfort Grips for superior grip and precision.",
+    "minOrderQuantity": 50,
+    "available": 700,
+    "price": 14
+  },
+  {
+    "name": "Electric Air Blower Dust Cleaner",
+    "img": "https://i.ibb.co/HG6BhDg/saw.jpg",
+    "description": "Input power: 600 W No-load speed: 0-16,000 rpm Air flow: 3.3 m3/min Variable speed: Yes Lock-on feature: Yes Dimenstions without nozzle (L X H) : 300 X 200 mm Weight: 1.7 Kg",
+    "minOrderQuantity": 30,
+    "available": 300,
+    "price": 30
+  },
+  {
+    "name": "Paint Brush",
+    "img": "https://i.ibb.co/xqKC8h9/brash.jpg",
+    "description": "Only the above package content, other products are not included. Note: different displays may cause the color of the item in the picture a little different from the real thing.",
+    "minOrderQuantity": 20,
+    "available": 500,
+    "price": 5
+  },
+  {
+    "name": "Measurement Tape",
+    "img": "https://i.ibb.co/xGs316c/tape.jpg",
+    "description": "This tool is easy to use. Note: different displays may cause the color of the item in the picture a little different from the real thing.",
+    "minOrderQuantity": 100,
+    "available": 800,
+    "price": 8
+  },
+  {
+    "name": "Adjustable Slywrench Spanner 10",
+    "img": "https://i.ibb.co/bLC7J2w/range.jpg",
+    "description": "Length: 250 MM (10 Inch) Made in China Excellent Quality Good Grip No Disappointments.easy handling comfortable for operation Feel comfortable and convenient to use",
+    "minOrderQuantity": 20,
+    "available": 500,
+    "price": 23
+  }
+]

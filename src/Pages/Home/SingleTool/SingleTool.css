@@ -1,0 +1,12 @@
+/* .card-wrapper{
+    width: 360px;
+} */
+.card-container img{
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+.card-container{
+    display: block;
+    margin: 0 auto;
+}

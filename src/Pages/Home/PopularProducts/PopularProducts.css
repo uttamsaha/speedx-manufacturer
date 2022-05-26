@@ -4,6 +4,9 @@
     place-items: center;
     /* position: relative; */
 }
-/* .popular-product-heading{
-    font-weight: 500;
-} */
+
+@media (max-width:688px) {
+    .popular-products{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
