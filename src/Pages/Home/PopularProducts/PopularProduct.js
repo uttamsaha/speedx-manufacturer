@@ -5,7 +5,7 @@ import './PopularProduct.css'
 const PopularProduct = ({product}) => {
     const {name, price, img} = product;
   return (
-    <div className='popular-product'>
+    <div className='popular-product mb-20'>
         <div>
         <div className='popular-image'>
         <img src={img} alt="" />

@@ -6,7 +6,7 @@ import {HiArrowRight} from 'react-icons/hi';
 const Contact = () => {
   return (
     <div className="contact-container">
-      <h1 className="text-3xl font-bold uppercase">Contact us</h1>
+      <h1 className="text-3xl font-bold uppercase text-primary">Contact us</h1>
       <div  data-aos="fade-up" className="contact-us">
       <div>
         <h5 className="contact-title font-bold">ANY QUESTIONS OR SUGGESTIONS?</h5>
