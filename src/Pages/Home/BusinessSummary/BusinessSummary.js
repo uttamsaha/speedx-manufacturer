@@ -9,7 +9,7 @@ import "./BusinessSummary.css";
 const BusinessSummary = () => {
   return (
     <div className="stock-container">
-        <h2 className="text-white text-3xl font-bold text-center pt-8">Business Summary</h2>
+        <h2 className="text-white text-3xl font-bold text-center pt-8 uppercase xs:text-2xl">Business Summary</h2>
       <div className="stock">
         <div className="stock-div items-center">
           <AiOutlineUserAdd className="summary-icon" />
