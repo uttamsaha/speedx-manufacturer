@@ -29,7 +29,12 @@ const Navbar = () => {
         <Link to="/addreview" className="text-white">Add Review</Link>
       </li>
       <li>
-        {user ? <button onClick={logout} className="btn btn-ghost text-white">Sign Out</button> : <Link to="/login" className="text-white text">Login</Link>}
+        {user ? <>
+        <li className="user-name">
+        {user?.displayName}
+        </li>
+          <button onClick={logout} className="btn btn-ghost text-white">Sign Out</button>
+        </> : <Link to="/login" className="text-white text">Login</Link>}
       </li>
     </>
   );
