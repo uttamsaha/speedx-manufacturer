@@ -5,7 +5,7 @@ import swal from "sweetalert";
 
 const AllUsersRow = ({ user, refetch, index }) => {
     // console.log('order is',order);
-    const {_id} = user;
+    const {_id, role} = user;
 
     const handleDelete = (id) => {
         //sweet alert
@@ -43,7 +43,13 @@ const AllUsersRow = ({ user, refetch, index }) => {
       <td>{user?.address}</td>
       <td>{user?.education}</td>
       <td>{user?.linkedin}</td>
-      <td><button className="btn btn-sm">Make Admin</button></td>
+      <td>
+        {role !== "admin" && (
+          <button className="btn btn-sm text-white">
+            Make Admin
+          </button>
+        )}
+      </td>
       <td>
         <button onClick={()=>handleDelete(_id)} className="btn btn-sm btn-primary text-white flex items-center justify-center">Delete <AiOutlineDelete className="text-xl ml-1"/></button>
       </td>
