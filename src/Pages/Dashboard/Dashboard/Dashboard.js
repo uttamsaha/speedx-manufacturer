@@ -42,7 +42,7 @@ const Dashboard = () => {
                 <Link to="/dashboard/addProduct"> <AiOutlineFileAdd className="text-2xl font-bold text-primary"/> Add a Product</Link>
               </li>
               <li>
-                <Link to="/dashboard/manageDoctor"><MdManageSearch className="text-2xl font-bold text-primary"/> Manage Products</Link>
+                <Link to="/dashboard/manageProducts"><MdManageSearch className="text-2xl font-bold text-primary"/> Manage Products</Link>
               </li>
               <li>
                 <Link to="/dashboard/manageDoctor"><FiUsers className="text-2xl font-bold text-primary"/>All Users</Link>
