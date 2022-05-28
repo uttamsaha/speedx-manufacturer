@@ -1,12 +1,12 @@
 .user-name{
     color: white;
-    background-color: rgb(23, 23, 23);
+    background-color: rgba(239, 13, 13, 0.632);
     font-size: 19px;
     font-weight:500;
     /* padding: 0px; */
     /* margin: 0px; */
-    border: 1px dotted white;
-    border-radius: 50%;
+    /* border: 1px solid white; */
+   border-radius: 60px !important;
 
 }
 

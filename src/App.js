@@ -14,6 +14,7 @@ import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile/UpdateProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import AllTools from './Pages/AllTools/AllTools';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/tools' element={<RequireAuth><AllTools></AllTools></RequireAuth>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
