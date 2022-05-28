@@ -24,7 +24,7 @@ const MyProfile = () => {
 
   return (
     <div>
-      <h2 className=" text-2xl mt-12 text-green-600 font-bold uppercase text-center">
+      <h2 className=" text-3xl mt-12 text-green-600 font-bold text-center">
         My Profile
       </h2>
       <div>

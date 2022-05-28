@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link to="/myportfolio" className="text-white">My Portfolio</Link>
       </li>
       <li>
+        <Link to="/blogs" className="text-white">Blogs</Link>
+      </li>
+      <li>
         {
           user && <Link to="/dashboard" className="text-white">Dashboard</Link>
         }

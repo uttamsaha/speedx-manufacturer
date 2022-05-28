@@ -32,13 +32,8 @@ const Dashboard = () => {
           <li>
             <Link to="/dashboard"> <RiProfileLine className="text-2xl font-bold text-primary"/>My Profile</Link>
           </li>
-          <li>
-            <Link to="/dashboard/addreview"> <MdOutlineRateReview className="text-2xl font-bold text-primary"/>Add Reviews</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/myorders"> <AiOutlineShoppingCart className="text-2xl font-bold text-primary"/>My Orders</Link>
-          </li>
-          {admin && (
+          
+          {admin ?
             <>
               <li>
                 <Link to="/dashboard/addDoctor"> <FaRegEdit className="text-2xl font-bold text-primary"/>Manage All Orders</Link>
@@ -53,7 +48,16 @@ const Dashboard = () => {
                 <Link to="/dashboard/manageDoctor"><FiUsers className="text-2xl font-bold text-primary"/>All Users</Link>
               </li>
             </>
-          )}
+            :
+            <>
+              <li>
+            <Link to="/dashboard/addreview"> <MdOutlineRateReview className="text-2xl font-bold text-primary"/>Add Reviews</Link>
+          </li>
+          <li>
+            <Link to="/dashboard/myorders"> <AiOutlineShoppingCart className="text-2xl font-bold text-primary"/>My Orders</Link>
+          </li>
+            </>
+          }
         </ul>
       </div>
     </div>

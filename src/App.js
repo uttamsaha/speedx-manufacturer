@@ -17,6 +17,7 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AllTools from './Pages/AllTools/AllTools';
 import RequireAdmin from './Pages/Login/RequireAdmin/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct/AddProduct';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/tools' element={<RequireAuth><AllTools></AllTools></RequireAuth>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
             <Route index element={<MyProfile></MyProfile>}></Route>
