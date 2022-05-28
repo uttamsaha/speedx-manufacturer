@@ -12,6 +12,7 @@ import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile/UpdateProfile';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
         <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
         </Route>

@@ -4,10 +4,14 @@ import React from 'react'
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import swal from 'sweetalert';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loadng/Loading';
 import './UpdateProfile.css'
 
 const UpdateProfile = () => {
     const [updateProfile, updating, error1] = useUpdateProfile(auth); 
+    if(updating){
+      return <Loading></Loading>
+    }
     const handleUpdate = async(event) => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -16,7 +20,7 @@ const UpdateProfile = () => {
     }
   return (
     <div>
-        <h2 className='text-2xl text-bold text-primary text-center m-5'>Update Your Profile...</h2>
+        <h2 className='text-2xl text-bold text-primary text-center m-5 font-bold'>Update Your Profile...</h2>
         <div className='update-profile'>
         <form onSubmit={handleUpdate} className=''>
             <label htmlFor="name">Your name:</label>

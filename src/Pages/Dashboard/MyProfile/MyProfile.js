@@ -13,7 +13,7 @@ const MyProfile = () => {
         My Profile
       </h2>
       <div>
-        <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-8">
           <div class="avatar">
             <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img src={user?.photoURL || profile} alt="" />
@@ -21,7 +21,7 @@ const MyProfile = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <div class="form-control">
+          <div class="form-control lg:w-80">
             <label class="label">
               <span class="label-text">Your Email</span>
             </label>
@@ -30,7 +30,7 @@ const MyProfile = () => {
               <input
                 type="text"
                 value={user?.email}
-                class="input input-bordered"
+                class="input input-bordered lg:w-64"
                 disabled
               />
             </label>
@@ -42,7 +42,7 @@ const MyProfile = () => {
               <input
                 type="text"
                 value={user?.displayName}
-                class="input input-bordered"
+                className="input input-bordered lg:w-64"
                 disabled
               />
             </label>
@@ -53,8 +53,8 @@ const MyProfile = () => {
               <span>Last Login</span>
               <input
                 type="text"
-                value={user?.metadata.lastSignInTime?.split('2022')[0]}
-                class="input input-bordered"
+                value={user?.metadata.lastSignInTime}
+                class="input input-bordered lg:w-64"
                 disabled
               />
             </label>

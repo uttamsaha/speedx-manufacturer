@@ -51,6 +51,7 @@ const AddReview = () => {
           {...register("name")}
           placeholder="name"
           required
+          defaultValue={user?.displayName}
         />
         <input
           className="input input-bordered input-success w-full max-w-xs mb-3"
