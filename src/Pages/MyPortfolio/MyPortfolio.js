@@ -4,7 +4,8 @@ import './MyPortfolio.css'
 
 const MyPortfolio = () => {
   return (
-    <div>
+   <div className="flex justify-center mb-16">
+        <div className="my-portfolio mt-8 pb-8">
       <h2 className="text-center font-bold text-primary text-3xl mt-5">My Portfolio</h2>
       <div className="flex justify-center mt-8">
           <div class="avatar">
@@ -34,7 +35,7 @@ const MyPortfolio = () => {
            </div>
        </div>
 
-       <div className="flex justify-center mt-5 mb-16">
+       <div className="flex justify-center mt-5">
            <div>
                <h3 className="text-xl text-primary font-bold mb-2">My Three Recent Projects: </h3>
                <div>
@@ -52,6 +53,7 @@ const MyPortfolio = () => {
        </div>
 
     </div>
+   </div>
   );
 };
 
