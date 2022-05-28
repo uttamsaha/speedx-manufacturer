@@ -9,7 +9,7 @@ import './PurchasePage.css';
 const PurchasePage = () => {
     const {id} = useParams();
     const [user] = useAuthState(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
     
     const [tool, setTool] = useState([]);
     const productName = tool?.name;
@@ -50,8 +50,6 @@ const PurchasePage = () => {
         .catch((error) => {
           console.error("Error:", error);
         });
-
-
     }
   return (
     <div className='flex justify-center gap-8 mt-8'>
@@ -73,9 +71,9 @@ const PurchasePage = () => {
 
       <form className='flex flex-col justify-center items-center mt-5 lg:w-96 xs:w-xs' onSubmit={handleOrder}>
       <input type="number" className='input input-bordered w-full max-w-lg mb-3' name='quantity'  placeholder="Enter quantity" required/>
-      <input className='input input-bordered w-full max-w-lg mb-3' name='product'  value={productName}/>
-      <input className='input input-bordered w-full max-w-lg mb-3' name='email'value={user?.email} />
-      <input className='input input-bordered w-full max-w-lg mb-3' name='name'  value={user?.displayName}/>
+      <input className='input input-bordered w-full max-w-lg mb-3' name='product'  value={productName} disabled/>
+      <input className='input input-bordered w-full max-w-lg mb-3' name='email'value={user?.email} disabled/>
+      <input className='input input-bordered w-full max-w-lg mb-3' name='name'  value={user?.displayName} disabled/>
       {/* <input className='input input-bordered w-full max-w-lg mb-3' {...register("age", { min: 18, max: 99 })} placeholder="Enter address"/> */}
       <input className='input input-bordered w-full max-w-lg mb-3' name='address' placeholder="Enter address" required/>
       <input className='input input-bordered w-full max-w-lg mb-3' placeholder="Enter Phone Number" name='phone' required/>

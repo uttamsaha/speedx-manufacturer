@@ -33,7 +33,7 @@ const Dashboard = () => {
             <Link to="/dashboard/addreview"> <MdOutlineRateReview className="text-2xl font-bold text-primary"/>Add Reviews</Link>
           </li>
           <li>
-            <Link to="/dashboard/history"> <AiOutlineShoppingCart className="text-2xl font-bold text-primary"/>My Orders</Link>
+            <Link to="/dashboard/myorders"> <AiOutlineShoppingCart className="text-2xl font-bold text-primary"/>My Orders</Link>
           </li>
           {admin && (
             <>

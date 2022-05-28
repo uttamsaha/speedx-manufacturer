@@ -13,6 +13,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile/UpdateProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -25,12 +26,14 @@ function App() {
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
-        <Route index element={<MyProfile></MyProfile>}></Route>
-          <Route path='addreview' element={<AddReview></AddReview>}></Route>
+            <Route index element={<MyProfile></MyProfile>}></Route>
+            <Route path='addreview' element={<AddReview></AddReview>}></Route>
+            <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
         </Route>
         <Route path='/updateprofile' element={<RequireAuth>
           <UpdateProfile></UpdateProfile>
-        </RequireAuth>}></Route>
+        </RequireAuth>}>
+        </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
