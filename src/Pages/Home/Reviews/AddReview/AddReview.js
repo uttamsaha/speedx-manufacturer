@@ -21,7 +21,7 @@ const AddReview = () => {
       .then((data) => {
         if(data?.result?.insertedId){
             swal(
-                "Inserted Successfully!",
+                "Review Successfully Added!",
                 "Your Review Successfully Added to Database!",
                 "success"
               );
@@ -44,6 +44,7 @@ const AddReview = () => {
           type="text"
           {...register("email")}
           value={user?.email}
+          
         />
         <input
           className="input input-bordered input-success w-full max-w-xs mb-3"
