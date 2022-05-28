@@ -5,7 +5,33 @@ import swal from "sweetalert";
 
 const AllUsersRow = ({ user, refetch, index }) => {
     // console.log('order is',order);
-    const {_id, role} = user;
+    const {_id, email, role} = user;
+
+    const makeAdmin = () => {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        })
+          .then((res) => {
+            if (res.status === 403) {
+              toast.error("Failed to load an admin");
+            }
+            return res.json();
+          })
+          .then((data) => {
+              console.log(data);
+            if (data.modifiedCount > 0) {
+              refetch(); //fetch api again
+              swal(
+                "Successfully Made Admin!",
+                "New Admin Added Successful",
+                "success"
+              );
+            }
+          });
+      };
 
     const handleDelete = (id) => {
         //sweet alert
@@ -45,7 +71,7 @@ const AllUsersRow = ({ user, refetch, index }) => {
       <td>{user?.linkedin}</td>
       <td>
         {role !== "admin" && (
-          <button className="btn btn-sm text-white">
+          <button onClick={makeAdmin} className="btn btn-sm text-white">
             Make Admin
           </button>
         )}

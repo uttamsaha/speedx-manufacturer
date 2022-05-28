@@ -46,14 +46,6 @@ const OrdersRow = ({ order, refetch, index }) => {
       <td>{order?.address}</td>
       <td>{order?.phone}</td>
       <td><button className="btn btn-sm">Pay</button></td>
-      {/* //role not equal to admin hole button ta dekhabe */}
-      {/* <td>
-        {role !== "admin" && (
-          <button className="btn btn-xs">
-            Make Admin
-          </button>
-        )}
-      </td> */}
       <td>
         <button onClick={()=>handleDelete(_id)} className="btn btn-sm btn-primary text-white flex items-center justify-center">Delete <AiOutlineDelete className="text-xl ml-1"/></button>
       </td>
