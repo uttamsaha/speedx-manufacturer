@@ -4,8 +4,11 @@ import { Link, Outlet } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useAdmin from "../../../hooks/useAdmin";
 import {RiProfileLine} from 'react-icons/ri';
-import {MdOutlineRateReview} from 'react-icons/md';
-import {AiOutlineShoppingCart} from 'react-icons/ai';
+import {MdOutlineRateReview, MdManageSearch} from 'react-icons/md';
+import {AiOutlineShoppingCart, AiOutlineFileAdd} from 'react-icons/ai';
+import {FiUsers} from 'react-icons/fi';
+import {FaRegEdit} from 'react-icons/fa';
+
 
 
 const Dashboard = () => {
@@ -38,13 +41,16 @@ const Dashboard = () => {
           {admin && (
             <>
               <li>
-                <Link to="/dashboard/users">All Users</Link>
+                <Link to="/dashboard/addDoctor"> <FaRegEdit className="text-2xl font-bold text-primary"/>Manage All Orders</Link>
               </li>
               <li>
-                <Link to="/dashboard/addDoctor">Add a Doctor</Link>
+                <Link to="/dashboard/addProduct"> <AiOutlineFileAdd className="text-2xl font-bold text-primary"/> Add a Product</Link>
               </li>
               <li>
-                <Link to="/dashboard/manageDoctor">Manage Doctors</Link>
+                <Link to="/dashboard/manageDoctor"><MdManageSearch className="text-2xl font-bold text-primary"/> Manage Products</Link>
+              </li>
+              <li>
+                <Link to="/dashboard/manageDoctor"><FiUsers className="text-2xl font-bold text-primary"/>All Users</Link>
               </li>
             </>
           )}
