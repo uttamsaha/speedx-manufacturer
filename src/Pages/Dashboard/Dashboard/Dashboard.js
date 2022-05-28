@@ -3,6 +3,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useAdmin from "../../../hooks/useAdmin";
+import {RiProfileLine} from 'react-icons/ri';
+import {MdOutlineRateReview} from 'react-icons/md';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 
 
 const Dashboard = () => {
@@ -24,13 +27,13 @@ const Dashboard = () => {
         <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
           <li>
-            <Link to="/dashboard">My Profile</Link>
+            <Link to="/dashboard"> <RiProfileLine className="text-2xl font-bold text-primary"/>My Profile</Link>
           </li>
           <li>
-            <Link to="/dashboard/addreview">Add Reviews</Link>
+            <Link to="/dashboard/addreview"> <MdOutlineRateReview className="text-2xl font-bold text-primary"/>Add Reviews</Link>
           </li>
           <li>
-            <Link to="/dashboard/history">My Orders</Link>
+            <Link to="/dashboard/history"> <AiOutlineShoppingCart className="text-2xl font-bold text-primary"/>My Orders</Link>
           </li>
           {admin && (
             <>
