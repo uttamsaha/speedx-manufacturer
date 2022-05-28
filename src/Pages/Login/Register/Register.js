@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
@@ -7,6 +7,7 @@ import swal from 'sweetalert';
 import Loading from '../../Shared/Loadng/Loading';
 import auth from '../../../firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import useToken from '../../../hooks/useToken';
 
 
 const Register = () => {
@@ -18,6 +19,13 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
   const [updateProfile, updating, error1] = useUpdateProfile(auth); 
+  const [token] = useToken(user);
+
+  useEffect(() => {
+    if (user) {
+      console.log(user);
+    }
+  }, [user]);
   if(loading || updating){
     return <Loading></Loading>
   }

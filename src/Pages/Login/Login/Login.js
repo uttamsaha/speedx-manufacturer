@@ -13,6 +13,7 @@ import axios from "axios";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loadng/Loading";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import useToken from "../../../hooks/useToken";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -23,7 +24,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
-
+  const [token] = useToken(user);
   if (error) {
     showError = (
       <div>
@@ -48,7 +49,7 @@ const Login = () => {
     localStorage.setItem("accessToken", data.accessToken);
   };
 
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
   //reset password
