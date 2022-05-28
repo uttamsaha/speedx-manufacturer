@@ -84,7 +84,7 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <h2 className="text-2xl text-green-500 text-center mt-5 font-bold">
+      <h2 className='text-center text-3xl font-bold m-8 text-green-500'>
         Add a New Product
       </h2>
       <div className="flex justify-center">
