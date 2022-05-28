@@ -10,7 +10,7 @@ const AddReview = () => {
   // const { register, handleSubmit } = useForm();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/tool", {
+    fetch("http://localhost:5000/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
