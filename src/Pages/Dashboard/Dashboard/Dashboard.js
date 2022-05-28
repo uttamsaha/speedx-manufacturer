@@ -36,7 +36,7 @@ const Dashboard = () => {
           {admin ?
             <>
               <li>
-                <Link to="/dashboard/addDoctor"> <FaRegEdit className="text-2xl font-bold text-primary"/>Manage All Orders</Link>
+                <Link to="/dashboard/manageOrders"> <FaRegEdit className="text-2xl font-bold text-primary"/>Manage All Orders</Link>
               </li>
               <li>
                 <Link to="/dashboard/addProduct"> <AiOutlineFileAdd className="text-2xl font-bold text-primary"/> Add a Product</Link>
