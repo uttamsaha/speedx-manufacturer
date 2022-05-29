@@ -4,8 +4,8 @@ import './MyPortfolio.css'
 
 const MyPortfolio = () => {
   return (
-   <div className="flex justify-center mb-16">
-        <div className="my-portfolio mt-8 pb-8 w-2/4">
+   <div className="flex justify-center mb-16 myprofile-container">
+        <div className="my-portfolio mt-8 pb-8 ">
           <h2 className="text-center font-bold text-primary text-3xl mt-5">My Portfolio</h2>
       <div className="flex justify-center mt-8">
           <div class="avatar">

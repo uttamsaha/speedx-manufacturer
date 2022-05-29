@@ -7,6 +7,7 @@ import auth from "../../../firebase.init";
 import { useQuery } from "react-query";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { async } from "@firebase/util";
+import Loading from "../../Shared/Loadng/Loading";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
@@ -17,11 +18,12 @@ const MyProfile = () => {
     data: users,
     isLoading,
     refetch,
-  } = useQuery("users", async() =>
-    await fetch(`http://localhost:5000/user?email=${email}`).then((res) => res.json())
+  } = useQuery("users", () => fetch(`http://localhost:5000/user?email=${email}`).then((res) => res.json())
   );
   // console.log(users?.[0]._id);
-
+  if(isLoading){
+    return <Loading></Loading>
+  }
   return (
     <div>
       <h2 className=" text-3xl mt-12 text-green-600 font-bold text-center">
@@ -45,7 +47,7 @@ const MyProfile = () => {
               <span>Email</span>
               <input
                 type="text"
-                value={users?.[0].email || ''}
+                value={email || ''}
                 class="input input-bordered lg:w-96"
                 disabled
               />
@@ -70,7 +72,7 @@ const MyProfile = () => {
               <span>Phone</span>
               <input
                 type="text"
-                value={users?.[0].phone || ''}
+                value={users?.[0]?.phone || ''}
                 className="input input-bordered lg:w-96"
                 disabled
               />
@@ -82,7 +84,7 @@ const MyProfile = () => {
               <span>Education</span>
               <input
                 type="text"
-                value={users?.[0].education || ''}
+                value={users?.[0]?.education || ''}
                 className="input input-bordered lg:w-96"
                 disabled
               />
@@ -94,7 +96,7 @@ const MyProfile = () => {
               <span>Linkedin</span>
               <input
                 type="text"
-                value={users?.[0].linkedin || ''}
+                value={users?.[0]?.linkedin || ''}
                 className="input input-bordered lg:w-96"
                 disabled
               />
@@ -106,7 +108,7 @@ const MyProfile = () => {
               <span>Address</span>
               <input
                 type="text"
-                value={users?.[0].address || ''}
+                value={users?.[0]?.address || ''}
                 className="input input-bordered lg:w-96"
                 disabled
               />
