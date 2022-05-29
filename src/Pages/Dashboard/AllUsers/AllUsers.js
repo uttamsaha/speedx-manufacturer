@@ -1,24 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { useQuery } from 'react-query';
-import Loading from '../../Shared/Loadng/Loading';
-import AllUsersRow from './AllUsersRow';
+import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
+import Loading from "../../Shared/Loadng/Loading";
+import AllUsersRow from "./AllUsersRow";
 
 const AllUsers = () => {
-    const {
-        data: users,
-        isLoading,
-        refetch,
-      } = useQuery("users", () =>
-         fetch('http://localhost:5000/users').then((res) => res.json())
-      );
-      if(isLoading){
-        return <Loading></Loading>
-      }
+  const {
+    data: users,
+    isLoading,
+    refetch,
+  } = useQuery("users", () =>
+    fetch("https://pure-citadel-59212.herokuapp.com/users").then((res) =>
+      res.json()
+    )
+  );
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div>
-        <h2 className='text-center text-3xl font-bold m-8 text-green-500'>Manage Orders</h2>
-        <div class="overflow-x-auto">
-        <table class="table w-full">
+      <h2 className="text-center text-3xl font-bold m-8 text-green-500">
+        Manage Orders
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -32,7 +36,7 @@ const AllUsers = () => {
             </tr>
           </thead>
           <tbody>
-            {users?.map((user,index) => (
+            {users?.map((user, index) => (
               <AllUsersRow
                 key={user._id}
                 user={user}
@@ -44,7 +48,7 @@ const AllUsers = () => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AllUsers;

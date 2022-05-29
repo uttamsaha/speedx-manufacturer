@@ -2,14 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useAuthState } from "react-firebase-hooks/auth";
 import swal from "sweetalert";
-import './AddReview.css';
+import "./AddReview.css";
 import auth from "../../../../firebase.init";
 
 const AddReview = () => {
   const [user] = useAuthState(auth);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/review", {
+    fetch("https://pure-citadel-59212.herokuapp.com/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,12 +18,12 @@ const AddReview = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data?.result?.insertedId){
-            swal(
-                "Review Successfully Added!",
-                "Your Review Successfully Added to Database!",
-                "success"
-              );
+        if (data?.result?.insertedId) {
+          swal(
+            "Review Successfully Added!",
+            "Your Review Successfully Added to Database!",
+            "success"
+          );
         }
         console.log("Success:", data);
       })
@@ -34,8 +34,14 @@ const AddReview = () => {
   };
   return (
     <div className="form-container">
-      <form className="add-item block mx-auto" onSubmit={handleSubmit(onSubmit)}>
-        <label className="text-xl font-bold text-primary mb-3" htmlFor="add-item">
+      <form
+        className="add-item block mx-auto"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <label
+          className="text-xl font-bold text-primary mb-3"
+          htmlFor="add-item"
+        >
           Add Your Review Here:
         </label>
         <input
@@ -43,7 +49,6 @@ const AddReview = () => {
           type="text"
           {...register("email")}
           value={user?.email}
-          
         />
         <input
           className="input input-bordered input-success w-full max-w-xs mb-3"
@@ -75,7 +80,11 @@ const AddReview = () => {
           placeholder="Write  Description"
           required
         ></textarea>
-        <input type="submit" value="Add Review" className="btn btn-primary text-white w-full max-w-xs" />
+        <input
+          type="submit"
+          value="Add Review"
+          className="btn btn-primary text-white w-full max-w-xs"
+        />
       </form>
     </div>
   );

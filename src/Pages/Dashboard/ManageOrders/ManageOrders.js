@@ -1,24 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { useQuery } from 'react-query';
-import Loading from '../../Shared/Loadng/Loading';
-import ManageOrdersRow from './ManagOrdersRow';
+import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
+import Loading from "../../Shared/Loadng/Loading";
+import ManageOrdersRow from "./ManagOrdersRow";
 
 const ManageOrders = () => {
-    const {
-        data: orders,
-        isLoading,
-        refetch,
-      } = useQuery("orders", () =>
-         fetch('http://localhost:5000/all-order').then((res) => res.json())
-      );
-      if(isLoading){
-        return <Loading></Loading>
-      }
+  const {
+    data: orders,
+    isLoading,
+    refetch,
+  } = useQuery("orders", () =>
+    fetch("https://pure-citadel-59212.herokuapp.com/all-order").then((res) =>
+      res.json()
+    )
+  );
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div>
-        <h2 className='text-center text-3xl font-bold m-8 text-green-500'>Manage Orders</h2>
-        <div class="overflow-x-auto">
-        <table class="table w-full">
+      <h2 className="text-center text-3xl font-bold m-8 text-green-500">
+        Manage Orders
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -32,7 +36,7 @@ const ManageOrders = () => {
             </tr>
           </thead>
           <tbody>
-            {orders?.map((order,index) => (
+            {orders?.map((order, index) => (
               <ManageOrdersRow
                 key={order._id}
                 order={order}
@@ -44,7 +48,7 @@ const ManageOrders = () => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ManageOrders;

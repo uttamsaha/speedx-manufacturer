@@ -1,7 +1,8 @@
 # SpeedX Manufacturer
 
 
-## [Live website link:](https://google.com)
+## [Live website link:](https://speedx-manufacturer.web.app/)
+https://speedx-manufacturer.web.app/
 
 
 ## Website's Functionality: 

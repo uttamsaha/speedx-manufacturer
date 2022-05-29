@@ -11,13 +11,14 @@ const MyOrders = () => {
   //react query
   // data: user means data er nam dilam users
 
-
   const {
     data: orders,
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-     fetch(`http://localhost:5000/order?email=${email}`).then((res) => res.json())
+    fetch(`https://pure-citadel-59212.herokuapp.com/order?email=${email}`).then(
+      (res) => res.json()
+    )
   );
 
   if (isLoading) {
@@ -29,8 +30,8 @@ const MyOrders = () => {
         My Orders
       </h2>
 
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -44,7 +45,7 @@ const MyOrders = () => {
             </tr>
           </thead>
           <tbody>
-            {orders?.map((order,index) => (
+            {orders?.map((order, index) => (
               <OrdersRow
                 key={order._id}
                 order={order}
