@@ -65,7 +65,7 @@ const AddProduct = () => {
                 "Your Product Successfully Added to Database!",
                 "success"
               );
-            reset(); //clear form
+            event.target.reset() //clear form
           }
           else{
             toast('Failed to add doctor');

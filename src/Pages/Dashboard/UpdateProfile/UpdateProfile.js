@@ -49,6 +49,7 @@ const UpdateProfile = () => {
           });
 
         swal("Successfully Updated.", "Your data successfully updated.!", "success");
+        event.target.reset();
     }
   return (
     <div>

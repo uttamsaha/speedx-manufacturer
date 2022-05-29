@@ -53,7 +53,6 @@ const Register = () => {
                 <form onSubmit={handleRegister} className='login-items'>
                 <label htmlFor="name">Name</label>
                 <input type="text" className='login' name="name" placeholder='Your name' required/>
-                <label htmlFor="name">Phone</label>
                 <label htmlFor="email">Email</label>
                 <input type="email" className='login' name="email" placeholder="your-email@gmail.com" required/>
                 <label htmlFor="password">Password</label>

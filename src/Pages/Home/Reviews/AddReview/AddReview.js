@@ -7,7 +7,6 @@ import auth from "../../../../firebase.init";
 
 const AddReview = () => {
   const [user] = useAuthState(auth);
-  // const { register, handleSubmit } = useForm();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     fetch("http://localhost:5000/review", {

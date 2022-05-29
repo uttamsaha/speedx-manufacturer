@@ -50,6 +50,7 @@ const PurchasePage = () => {
         .catch((error) => {
           console.error("Error:", error);
         });
+        event.target.reset(); // to reset form value
     }
   return (
     <div className='flex justify-center gap-8 mt-8'>
@@ -77,7 +78,7 @@ const PurchasePage = () => {
       {/* <input className='input input-bordered w-full max-w-lg mb-3' {...register("age", { min: 18, max: 99 })} placeholder="Enter address"/> */}
       <input className='input input-bordered w-full max-w-lg mb-3' name='address' placeholder="Enter address" required/>
       <input className='input input-bordered w-full max-w-lg mb-3' placeholder="Enter Phone Number" name='phone' required/>
-      <input className='btn btn-primary text-white lg:w-96 xs:w-xs' type="submit" value="Submit" />
+      <input className='btn btn-primary text-white lg:w-96 xs:w-xs' type="submit" value="Place Order" />
     </form>
     </div>
   )
