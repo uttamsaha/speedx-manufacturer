@@ -19,3 +19,19 @@
 .tool-available{
     font-weight: 500;
 }
+
+@media (max-width:688px) {
+    .mobile-view{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-view img{
+        width: 250px;
+        /* margin-right: auto; */
+    }
+    .wrapper-container{
+        width: 350px !important;
+        /* background-color: rebeccapurple; */
+    }
+}

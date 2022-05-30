@@ -82,9 +82,9 @@ const PurchasePage = () => {
     event.target.reset(); // to reset form value
   };
   return (
-    <div className="flex justify-center gap-8 mt-8">
+    <div className="flex justify-center gap-8 mt-8 mobile-view">
       <div>
-        <div className="card-item">
+        <div className="card-item wrapper-container">
           <div>
             <img className="w-56" src={tool?.img} alt="" />
           </div>
@@ -99,7 +99,7 @@ const PurchasePage = () => {
               <span className="text-primary">{tool.minOrderQuantity} pcs</span>
             </p>
             <p className="tool-available">
-              Total Price:{" "}
+              Available:{" "}
               <span className="text-primary">{tool?.available} pcs</span>
             </p>
           </div>
