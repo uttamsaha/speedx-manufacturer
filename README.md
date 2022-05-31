@@ -18,6 +18,8 @@ https://speedx-manufacturer.web.app/
 ## Technologies that are used to build the project:
 * HTML5
 * CSS3
+* Tailwind
+* DaisyUI
 * JavaScript
 * React JS
 * Firebase 
