@@ -5,7 +5,7 @@ import "./AllTools.css";
 const AllTools = () => {
   const [tools, setTools] = useState([]);
   useEffect(() => {
-    fetch("https://pure-citadel-59212.herokuapp.com/tool")
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/tool")
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);

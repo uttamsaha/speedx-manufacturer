@@ -22,7 +22,7 @@ const PurchasePage = () => {
   const [tool, setTool] = useState([]);
   const productName = tool?.name;
   useEffect(() => {
-    fetch(`https://pure-citadel-59212.herokuapp.com/tool/${id}`)
+    fetch(`https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/tool/${id}`)
       .then((res) => res.json())
       .then((data) => setTool(data));
   }, [id]);
@@ -58,7 +58,7 @@ const PurchasePage = () => {
       address: address,
       phone: phone,
     };
-    fetch("https://pure-citadel-59212.herokuapp.com/order", {
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

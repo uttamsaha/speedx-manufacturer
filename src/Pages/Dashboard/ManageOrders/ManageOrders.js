@@ -9,7 +9,7 @@ const ManageOrders = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("https://pure-citadel-59212.herokuapp.com/all-order").then((res) =>
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/all-order").then((res) =>
       res.json()
     )
   );

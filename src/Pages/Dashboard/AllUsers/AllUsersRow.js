@@ -8,7 +8,7 @@ const AllUsersRow = ({ user, refetch, index }) => {
   const { _id, email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`https://pure-citadel-59212.herokuapp.com/user/admin/${email}`, {
+    fetch(`https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -46,7 +46,7 @@ const AllUsersRow = ({ user, refetch, index }) => {
         swal("Your Item has been deleted successfully!", {
           icon: "success",
         });
-        const url = `https://pure-citadel-59212.herokuapp.com/users/${id}`;
+        const url = `https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/users/${id}`;
         fetch(url, {
           method: "DELETE",
         })

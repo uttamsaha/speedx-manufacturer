@@ -45,7 +45,7 @@ const AddProduct = () => {
           };
 
           //send docotr info to my database
-          fetch("https://pure-citadel-59212.herokuapp.com/tool", {
+          fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/tool", {
             method: "POST",
             headers: {
               "content-type": "application/json",

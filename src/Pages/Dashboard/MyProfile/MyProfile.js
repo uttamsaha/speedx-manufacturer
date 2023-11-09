@@ -19,7 +19,7 @@ const MyProfile = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch(`https://pure-citadel-59212.herokuapp.com/user?email=${email}`).then(
+    fetch(`https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/user?email=${email}`).then(
       (res) => res.json()
     )
   );

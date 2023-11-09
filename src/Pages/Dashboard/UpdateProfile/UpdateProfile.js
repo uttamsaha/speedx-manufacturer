@@ -21,7 +21,7 @@ const UpdateProfile = () => {
     "users",
     async () =>
       await fetch(
-        `https://pure-citadel-59212.herokuapp.com/user?email=${email}`
+        `https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/user?email=${email}`
       ).then((res) => res.json())
   );
   console.log(users);
@@ -44,7 +44,7 @@ const UpdateProfile = () => {
       linkedin: linkedin,
       address: address,
     };
-    fetch(`https://pure-citadel-59212.herokuapp.com/user/${email}`, {
+    fetch(`https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

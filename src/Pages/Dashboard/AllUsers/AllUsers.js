@@ -9,7 +9,7 @@ const AllUsers = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch("https://pure-citadel-59212.herokuapp.com/users").then((res) =>
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/users").then((res) =>
       res.json()
     )
   );

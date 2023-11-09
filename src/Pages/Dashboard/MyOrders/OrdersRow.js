@@ -20,7 +20,7 @@ const OrdersRow = ({ order, refetch, index }) => {
         swal("Your Item has been deleted successfully!", {
           icon: "success",
         });
-        const url = `https://pure-citadel-59212.herokuapp.com/order/${id}`;
+        const url = `https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/order/${id}`;
         fetch(url, {
           method: "DELETE",
         })

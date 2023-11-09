@@ -9,7 +9,7 @@ const AddReview = () => {
   const [user] = useAuthState(auth);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("https://pure-citadel-59212.herokuapp.com/review", {
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const MyOrders = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch(`https://pure-citadel-59212.herokuapp.com/order?email=${email}`).then(
+    fetch(`https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/order?email=${email}`).then(
       (res) => res.json()
     )
   );

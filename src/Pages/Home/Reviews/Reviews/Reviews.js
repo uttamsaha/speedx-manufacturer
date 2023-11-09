@@ -5,7 +5,7 @@ import "./Reviews.css";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://pure-citadel-59212.herokuapp.com/review")
+    fetch("https://speedx-manufacturer-a8fc85684ad6.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
