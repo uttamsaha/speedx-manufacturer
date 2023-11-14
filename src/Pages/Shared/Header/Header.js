@@ -3,41 +3,52 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
-import logo from '../../../Images/logo.png';
-import './Header.css';
+import logo from "../../../Images/logo.png";
+import "./Header.css";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
-    localStorage.removeItem('accessToken');
+    localStorage.removeItem("accessToken");
   };
   const menuItems = (
     <>
       <li>
-        <Link to="/" className="text-white">Home</Link>
+        <Link to="/" className="text-white">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/tools" className="text-white">All Tools</Link>
+        <Link to="/tools" className="text-white">
+          All Tools
+        </Link>
       </li>
       <li>
-        <Link to="/myportfolio" className="text-white">My Portfolio</Link>
+        <Link to="/myportfolio" className="text-white">
+          My Portfolio
+        </Link>
       </li>
       <li>
-        <Link to="/blogs" className="text-white">Blogs</Link>
+        {user && (
+          <Link to="/dashboard" className="text-white">
+            Dashboard
+          </Link>
+        )}
       </li>
       <li>
-        {
-          user && <Link to="/dashboard" className="text-white">Dashboard</Link>
-        }
-      </li>
-      <li>
-        {user ? <>
-        <li className="user-name">
-        {user?.displayName}
-        </li>
-          <button onClick={logout} className="btn btn-ghost text-white">Sign Out</button>
-        </> : <Link to="/login" className="text-white text">Login</Link>}
+        {user ? (
+          <>
+            <li className="user-name">{user?.displayName}</li>
+            <button onClick={logout} className="btn btn-ghost text-white">
+              Sign Out
+            </button>
+          </>
+        ) : (
+          <Link to="/login" className="text-white text">
+            Login
+          </Link>
+        )}
       </li>
     </>
   );
@@ -69,20 +80,21 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-       <div className="flex justify-start items-center ">
-         <img className="w-12 header-img" src={logo} alt="" />
-          <Link to="/" className="btn btn-ghost normal-case text-xl text-white xs:mx-[-150px] xs:mr[-150px]">SpeedX Manufacturer</Link>
-       </div>
+        <div className="flex justify-start items-center ">
+          <img className="w-12 header-img" src={logo} alt="" />
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case text-xl text-white xs:mx-[-150px] xs:mr[-150px]"
+          >
+            SpeedX Manufacturer
+          </Link>
+        </div>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end text-white lg:hidden">
-        <label
-          tabIndex="1"
-          for="dashboard-sidebar"
-          className="btn btn-ghost"
-        >
+        <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
