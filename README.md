@@ -5,6 +5,25 @@
 https://speedx-manufacturer.web.app/
 
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/uttamsaha/speedx-manufacturer.git
+  cd speedx-manufacturer
+  npm install
+  npm start
+```
+
+To run server to to speedx-server folder then
+
+```bash
+  npm install
+  npm start / node index.js / nodemon index.js
+```
+
+
 ## Website's Functionality: 
 * Firstly user can sign up, login to this website. Then user can also verify email address & rest password if forgot.
 * There are 2 role in this website admin role and user role. User can add review this review will show on home page, and user can order that store on database and see the order in my orders from the dashboard and user can delete the order that they had done. 
