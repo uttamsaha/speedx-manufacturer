@@ -24,25 +24,34 @@ To run server to to speedx-server folder then
 ```
 
 
-## Website's Functionality: 
-* Firstly user can sign up, login to this website. Then user can also verify email address & rest password if forgot.
-* There are 2 role in this website admin role and user role. User can add review this review will show on home page, and user can order that store on database and see the order in my orders from the dashboard and user can delete the order that they had done. 
-* Admin can add a new product, manage orders, mange products, mange users, and make admin to other users.
-* Basically home page show 6 products and all tool menu show all products that are stored in database.
-* User and admin both can se My profile in dashboard they can update their detail information here. Eg. Name, phone, address, education background, etc
+## Website's Functionality:
+* Two types of user "administrator and customer".
+* Sign up, login and logout functionality.
+* Login/sign up with Google and Github functionality.
+* Email verify and password reset functionality.
+* View profile option and update profile/user information.
+* Customer can create order for products.
+* Custom can see their previous order from dashboard and can delete an order if want.
+* Administrator can manage all orders, view all orders placed form users and delete an order.
+* Admin can add new products with photo uploading functionality.
+* Administrator can manage products, View all products available quantity of product and delete product from dashboard.
+* Administrator can manage user, delete an user and also admin can make admin to another user.
+* Tools option shows all products of this manufacturer customer can order form here.
+* User can add review this review will show on home page directly.
 * JWT token implemented for security purpose. 
-* My portfolio include my personal information. 
 
 
 ## Technologies that are used to build the project:
 * HTML5
 * CSS3
-* Tailwind
+* Tailwind CSS
 * DaisyUI
 * JavaScript
 * React JS
 * Firebase 
 * Node JS
+* Express JS
 * React Query
 * React Firebase Hooks
+* JWT Token
 * MongoDB
