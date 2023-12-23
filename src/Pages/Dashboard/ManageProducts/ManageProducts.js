@@ -22,7 +22,7 @@ const ManageProducts = () => {
         Manage Products
       </h2>
       <div className="overflow-x-auto">
-        <table className="table w-full">
+        <table className="table w-11/12 mx-auto">
           <thead>
             <tr>
               <th></th>

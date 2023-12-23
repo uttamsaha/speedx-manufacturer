@@ -13,7 +13,7 @@ const Tools = () => {
       <h1 className="text-center sm:text-2xl  lg:text-3xl text-primary uppercase font-bold">
         Tools We Have
       </h1>
-      <div className="grid lg:grid-cols-3 xs:grid-cols-1 place-items-center gap-y-20">
+      <div className="container  mx-auto grid lg:grid-cols-3 xs:grid-cols-1 place-items-center place-content-center gap-y-10">
         {tools.map((tool) => (
           <SingleTool tool={tool}></SingleTool>
         ))}

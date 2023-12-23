@@ -21,8 +21,8 @@ const AllUsers = () => {
       <h2 className="text-center text-3xl font-bold m-8 text-green-500">
         Manage Orders
       </h2>
-      <div className="overflow-x-auto">
-        <table className="table w-full">
+      <div className="overflow-x-aut">
+        <table className="table w-11/12 mx-auto">
           <thead>
             <tr>
               <th></th>
