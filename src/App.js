@@ -20,7 +20,7 @@ import AddProduct from './Pages/Dashboard/AddProduct/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
 import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
-
+ //change to layout and route
 function App() {
   return (
     <div>
